@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  vault-system:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: authorization-governed-vault
+    ports:
+      - "8545:8545"
+    command: sh ./docker/entrypoint.sh
